@@ -1,0 +1,23 @@
+# すべてのテキストファイルの改行コードを自動変換
+* text=auto
+
+# Go関連ファイルはLFで統一
+*.go text eol=lf
+go.mod text eol=lf
+go.sum text eol=lf
+
+# Markdownファイル
+*.md text eol=lf
+
+# シェルスクリプト（もしあれば）
+*.sh text eol=lf
+
+# Windowsバッチファイル
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# バイナリファイルは変換しない
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
