@@ -14,13 +14,14 @@ func main() {
 	}
 
 	// 複数ファイルをループ処理
-	for _, path := range args[1:] {
+	for _, path := range args[1:] { // 引数のみ取得する
 		info, err := os.Stat(path)
 		if err != nil {
 			fmt.Println("ファイルが見つかりません:", path)
 			continue
 		}
 
+		// ディレクトリの場合
 		if info.IsDir() {
 			if err := os.RemoveAll(path); err != nil {
 				fmt.Println("削除失敗:", err)
