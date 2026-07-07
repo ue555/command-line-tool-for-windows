@@ -10,7 +10,7 @@ func main() {
 	// 引数チェック
 	args := os.Args
 	if len(args) < 2 {
-		fmt.Println("使い方: touch <path>")
+		fmt.Println("使い方: touch <filename>")
 		os.Exit(1)
 	}
 
