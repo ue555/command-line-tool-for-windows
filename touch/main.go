@@ -23,7 +23,7 @@ func main() {
 			fmt.Fprintln(os.Stderr, err)
 		}
 
-	} else if !os.IsNotExist(err) {
+	} else if os.IsNotExist(err) {
 		f, err := os.Create(path)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, err)
